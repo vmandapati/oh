@@ -138,7 +138,7 @@ var data = {
      "children": ["q_interests_self"]
    },
    "a_him": {
-     "name": "For Him",
+     "name": "Him",
      "img": "randomwine.png",
      "children": ["q_interests_him"]
    },
@@ -311,7 +311,7 @@ $(function() {
      else{
        for(var i = 0; i < items.length; i++) {
          var item = items[i];
-         $list.append('<li><img data-choice="' + item.id + '" src='+item.img+'> <p class="resultDescription">'+item.name+'</p></li>');
+         $list.append('<li><img data-choice="' + item.id + '" src='+item.img+'> <button class="resultDescription">'+item.name+'</button></li>');
 
         // $list.append('<li><a href="#" data-choice="' + item.id + '">' + item.name + '</a></li>');
        }
