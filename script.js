@@ -311,7 +311,7 @@ $(function() {
      else{
        for(var i = 0; i < items.length; i++) {
          var item = items[i];
-         $list.append('<li><img data-choice="' + item.id + '" src='+item.img+'> <button class="resultDescription">'+item.name+'</button></li>');
+         $list.append('<div class="liContainer"><li><img data-choice="' + item.id + '" src='+item.img+'> <button class="resultDescription">'+item.name+'</button></li></div>');
 
         // $list.append('<li><a href="#" data-choice="' + item.id + '">' + item.name + '</a></li>');
        }

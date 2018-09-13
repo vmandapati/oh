@@ -52,6 +52,11 @@ body{
     padding-bottom: 24px;
 }
 
+.liContainer{
+  position: relative;
+  padding-bottom: 24px;
+}
+
 img{
   width: auto;
   height: 120px;
@@ -65,13 +70,13 @@ img{
   border: 1px solid #b4bac1;
   Height: 30px;
   position: absolute;
-  top: 172px;
+  top: 95px;
   vertical-align: middle;
-  left: 128px;
+  left: 120px;
   width: 150px;
   background: #ffffff;
   font-family: roboto-bold;
-
+  z-index: 999;
 }
 
 ul{
@@ -126,6 +131,10 @@ button{
   color: #fff;
   border: none;
   letter-spacing: .04em;
+}
+
+.quiz{
+  border: 1px solid #b4bac1;
 }
 
 }
