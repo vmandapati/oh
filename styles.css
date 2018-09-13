@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Fjalla';
+    src:url('fonts/fjalla.woff') format('woff'),
+        url('fonts/fjalla.woff2') format('woff2'),
+        url('fonts/fjalla.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@media only screen and (max-width: 600px) {
+  
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.LHeadline{
+    text-align: center;
+    padding-bottom: 48px;
+    margin: 0;
+    font-family: Fjalla,Helvetica,Arial,sans-serif;
+    color: #1c252a;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+img{
+  width: auto;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+}
+.resultDescription{
+  text-align: center;
+  border-radius: 3px;
+  Border: 1px, #b4bac1;
+  Height: 40px
+}
+
+ul{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.resultImage{
+  list-style: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.resultImage:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+button{
+  clear: both;
+}
+.progressBar{
+  display: block;
+  clear: both;
+}
+.progressTick{
+  height: 5px;
+  width: 100px;
+  background-color: #555;
+  float: left;
+  margin: 10px;
+}
+.resultForm{
+  display: none;
+}
+
+.resultForm p{
+  text-align: left;
+}
+
+.viewResultsButton{
+  display: block;
+  width: 300px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 16px;
+  height: 40px;
+  background-color: #246bb1;
+  color: #fff;
+  border: none;
+  letter-spacing: .04em;
+}
+
+}
