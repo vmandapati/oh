@@ -1,7 +1,6 @@
 
 
 
-   return this.choices[id];
 var data2 = {
   "question": "Who are you shopping for?",
   "answers": [
