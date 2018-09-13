@@ -160,11 +160,13 @@ var data = {
    "q_interests_self": {
      "name": "What are your interests?",
      "img": "randomwine.png",
-     "children": ["a_foodie", "a_trendy", "a_cocktail", "a_award"]
+     //"children": ["a_foodie", "a_trendy", "a_cocktail", "a_award"]
+     "children": ["a_foodie"]
    },
    "q_interests_him": {
      "name": "What are his interests?",
-     "children":  ["a_foodie_him", "a_trendy_him", "a_cocktail_him", "a_award"]
+     //"children":  ["a_foodie_him", "a_trendy_him", "a_cocktail_him", "a_award"]
+     "children":  ["a_foodie_him"]
    },
    "q_interests_her": {
      "name": "What are her interests?",
@@ -329,14 +331,7 @@ var renderResults = function(userResponse, ){
  $(document).on('click', 'li', function(e) {
    e.preventDefault();
    var choiceId = $(this).find('img').data('choice');
-   userResponse.push(choiceId);
-
-   console.log(userResponse);
-   var kids = tree.getChildren(choiceId);
-   if(kids) {
-     current_id = choiceId;
-     renderList(kids);
-   }
+   current_id = selectAnswer(choiceId);
  });
 
 $('.restartQuiz').on('click', function(e) {
@@ -364,10 +359,41 @@ $('.restartQuiz').on('click', function(e) {
    }
  });
 
+ function selectAnswer(choiceId) {
+  userResponse.push(choiceId);
+  console.log("userResponse: ",userResponse);
+  console.log("choiceId: ",choiceId);
+  var kids = tree.getChildren(choiceId);
 
+  if (kids) {
+    current_id = choiceId;
+    renderList(kids);
+  }
+  updateProgressBar();
+  return current_id;
+}
+
+function updateProgressBar(){
+  var number = userResponse.length+1;
+  $("#currentNumber").text(number);
+  $(".progressTick").each(function(index){
+    if(index < number){
+    $(this).addClass("active");
+    }
+    else{
+      $(this).removeClass("active");
+    }
+  });
+}
+
+window.onload = function(){
+  selectAnswer("a_him");
+}
 
 
  _doInitial();
 
 
 });
+
+
