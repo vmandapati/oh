@@ -33,11 +33,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   
 
 body{
   font-family: 'Roboto', sans-serif;
+  margin: 12px;
 }
 .LHeadline{
     text-align: center;
@@ -69,14 +70,23 @@ img{
   border-radius: 3px;
   border: 1px solid #b4bac1;
   Height: 30px;
-  position: absolute;
   top: 95px;
   vertical-align: middle;
-  left: 120px;
+  left: 142px;
   width: 150px;
   background: #ffffff;
   font-family: roboto-bold;
   z-index: 999;
+}
+
+.resultDescription:hover{
+  background: #DBDEE0
+}
+
+.resultDescription:focus{
+  text-decoration: underline;
+  background: #ffffff;
+  outline:0;
 }
 
 ul{
@@ -99,16 +109,32 @@ ul{
 button{
   clear: both;
 }
+.progressBarContainer{
+  background: #f4f7f9;;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
 .progressBar{
-  display: block;
+  display: table;
   clear: both;
+  margin: auto;
+  /* margin-bottom: 8px; */
+  background-color: white;
+  border-radius: 100px;
+  border: 1px solid #e6ecf0; 
 }
 .progressTick{
   height: 5px;
-  width: 100px;
-  background-color: #555;
+  width: 35px;
+  background-color: #e6ecf0;
   float: left;
-  margin: 10px;
+  border-radius: 100px;
+  margin: 5px;
+}
+
+.active{
+  background-color: #007e3c;
 }
 .resultForm{
   display: none;
@@ -134,7 +160,25 @@ button{
 }
 
 .quiz{
-  border: 1px solid #b4bac1;
+  border: 1px solid #e6ecf0;;
+}
+
+.progressInNumber{
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.resultDescriptionContainer{
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+}
+
+.progressInNumberValue{
+  font-family: Roboto-Regular;
+  font-size: 14px;
 }
 
 }

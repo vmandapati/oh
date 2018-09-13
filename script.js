@@ -311,7 +311,7 @@ $(function() {
      else{
        for(var i = 0; i < items.length; i++) {
          var item = items[i];
-         $list.append('<div class="liContainer"><li><img data-choice="' + item.id + '" src='+item.img+'> <button class="resultDescription">'+item.name+'</button></li></div>');
+         $list.append('<li class="liContainer"><img data-choice="' + item.id + '" src='+item.img+'> <div class="resultDescriptionContainer"><button class="resultDescription">'+item.name+'</button></div></li>');
 
         // $list.append('<li><a href="#" data-choice="' + item.id + '">' + item.name + '</a></li>');
        }
@@ -363,6 +363,8 @@ $('.restartQuiz').on('click', function(e) {
      _doInitial();
    }
  });
+
+
 
 
  _doInitial();
