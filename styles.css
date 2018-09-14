@@ -42,7 +42,6 @@ body{
 }
 .LHeadline{
     text-align: center;
-    padding-bottom: 48px;
     margin: 0;
     font-family: Fjalla,Helvetica,Arial,sans-serif;
     color: #1c252a;
@@ -51,32 +50,35 @@ body{
     text-transform: uppercase;
     padding-top: 24px;
     padding-bottom: 24px;
+  
 }
 
 .liContainer{
   position: relative;
+  padding-top: 24px;
   padding-bottom: 24px;
+  
+}
+
+.answerImage{
+  width: auto;
+  height: 120px;
 }
 
 img{
-  width: auto;
-  height: 120px;
+  height:100%;
   margin: 0 auto;
   display: block;
 }
 .resultDescription{
   font-size: 14px;
-  text-align: center;
   border-radius: 3px;
   border: 1px solid #b4bac1;
   Height: 30px;
-  top: 95px;
-  vertical-align: middle;
-  left: 142px;
   width: 150px;
   background: #ffffff;
-  font-family: roboto-bold;
-  z-index: 999;
+  font-family: Roboto-Bold;
+  margin-bottom: 12px;
 }
 
 .resultDescription:hover{
@@ -180,5 +182,21 @@ button{
   font-family: Roboto-Regular;
   font-size: 14px;
 }
+.detailDescription{
+  font-family: Roboto-Regular;
+  font-size: 12px;
+  color: #59626a;
+  text-align: center;
+}
 
+.outerspace {
+  overflow:hidden;
+}
+
+.content {
+  text-align: center;
+  width:135px;
+  margin:0 auto;
+
+}
 }

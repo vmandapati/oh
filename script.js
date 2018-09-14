@@ -1,36 +1,5 @@
 
 
-
-var data2 = {
-  "question": "Who are you shopping for?",
-  "answers": [
-    {
-      "value": "Him",
-      "image": "randomwine.png",
-      "next": {
-        "question": "How would you describe his personality?",
-        "answers": [
-          {
-            "value": "The Adventurer",
-            "decription": "He loves discovering food and wine",
-            "image": "randomwine.png",
-            "next": {
-              "question": "Price Range?",
-              "answers": [
-                {
-                  "value": "$"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  ]
-}
-
-/** TEST CODE **/
-
 $(function () {
   //storing the user response in an array
   var userResponse = [];
@@ -42,8 +11,7 @@ $(function () {
   var renderList = function (items) {
     currentQuestion = items;
     var title = items.question;
-    $('.resultDescription').hide();
-    console.log("inside render list");
+
 
     $title.text(title);
     $list.empty();
@@ -51,19 +19,34 @@ $(function () {
 
       for (var i = 0; i < items.answers.length; i++) {
         var item = items.answers[i];
-        $list.append('<li class="liContainer"><img data-choice="' 
+        $list.append('<li class="liContainer"><div class="answerImage"><img data-choice="' 
         +i  
-        + '" src=' + item.image + '> <div class="resultDescriptionContainer"><button class="resultDescription">' 
-        + item.value + '</button></div></li>');
+        + '" src=' + item.image + 
+        '></div> <div class="resultDescriptionContainer"><button class="resultDescription">' 
+        + item.value + 
+        '</button>'+
+        addDetailDescription(item)+
+        '</div></li>');
       }
     
   };
+
+  function addDetailDescription(item){
+    if(item.description == null)
+    {
+     return "";
+    }
+    else{
+      return '<div class="outerspace"><div class="content"><span class="detailDescription">'+item.description+'</span></div></div>';
+    }
+  }
+
   var renderResults = function (userResponse, ) {
     $('.resultForm').show();
   }
   var _doInitial = function () {
-
-    renderList(data2);
+    //renderList(getQuizData());
+    
   };
 
   $(document).on('click', 'li', function (e) {
@@ -119,7 +102,9 @@ $(function () {
   }
 
   window.onload = function () {
-   // selectAnswer("a_him");
+   //selectAnswer(0);
+   renderList(getQuizData());
+   $(window).trigger("resize");
   }
 
 
